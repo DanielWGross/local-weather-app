@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -6,7 +7,7 @@ import { CurrentWeatherComponent } from './current-weather/current-weather.compo
 
 @NgModule({
   declarations: [AppComponent, CurrentWeatherComponent],
-  imports: [BrowserModule],
+  imports: [BrowserModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
