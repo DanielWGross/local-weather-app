@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve --port 5000 --open true",
     "build": "ng build",
+    "build:prod": "ng build --prod",
     "test": "ng test",
     "lint": "run-p lint:ts lint:tsc",
     "e2e": "ng e2e",
