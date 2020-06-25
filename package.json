@@ -32,7 +32,9 @@
     "docker:debugmessage": "echo Docker Debug Completed Successfully! Hit Ctrl+C to terminate log tailing.",
     "docker:debug": "run-s -cs docker:build docker:run docker:open docker:debugmessage docker:taillogs",
     "prenow:publish": "npm run build:prod",
-    "now:publish": "now --platform-version 2 dist/local-weather-app"
+    "now:publish": "now --platform-version 2 dist/local-weather-app",
+    "test:a11y": "pa11y --standard Section508 http://localhost:5000",
+    "test:a11y:ci": "pa11y-ci"
   },
   "private": true,
   "dependencies": {
@@ -62,6 +64,7 @@
     "codelyzer": "^5.1.2",
     "cross-conf-env": "^1.1.2",
     "dev-norms": "1.7.1",
+    "http-server": "^0.12.3",
     "import-sort": "^6.0.0",
     "import-sort-cli": "^6.0.0",
     "import-sort-parser-typescript": "^6.0.0",
@@ -77,6 +80,8 @@
     "karma-jasmine-html-reporter": "^1.4.2",
     "npm-run-all": "^4.1.5",
     "open-cli": "^6.0.1",
+    "pa11y": "^5.3.0",
+    "pa11y-ci": "^2.3.0",
     "prettier": "^2.0.5",
     "protractor": "~7.0.0",
     "rimraf": "^3.0.2",
