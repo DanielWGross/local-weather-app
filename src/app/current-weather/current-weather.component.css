@@ -1,3 +1,11 @@
-.weather-image {
-  height: 30px;
+.right {
+  text-align: right;
+}
+
+.mar-bottom-0 {
+  margin-bottom: 0;
+}
+
+.unit {
+  vertical-align: super;
 }
