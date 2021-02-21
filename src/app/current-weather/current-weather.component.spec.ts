@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { of } from 'rxjs';
 
+import { MaterialModule } from '../material.module';
 import { WeatherService } from '../weather/weather.service';
 import { fakeWeather } from '../weather/weather.service.fake';
 import { CurrentWeatherComponent } from './current-weather.component';
@@ -16,6 +17,7 @@ describe('CurrentWeatherComponent', () => {
       'getCurrentWeather',
     ]);
     TestBed.configureTestingModule({
+      imports: [MaterialModule],
       declarations: [CurrentWeatherComponent],
       providers: [{ provide: WeatherService, useValue: weatherServiceSpy }],
     }).compileComponents();
@@ -62,7 +64,8 @@ describe('CurrentWeatherComponent', () => {
 
     // Assert on DOM
     const debugElement = fixture.debugElement;
-    const titleElement: HTMLElement = debugElement.query(By.css('span')).nativeElement;
+    const titleElement: HTMLElement = debugElement.query(By.css('.mat-title'))
+      .nativeElement;
     expect(titleElement.textContent).toContain('Fake City');
   });
 });
